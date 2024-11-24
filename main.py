@@ -3,16 +3,16 @@ from typing import Union
 import torch
 import torch.nn.functional as F
 from transformers import AutoModel, AutoTokenizer
-import os
+# import os
 
-proxies = {
-    "http": "http://localhost:1087",
-    "https": "http://localhost:1087",
-}
+# proxies = {
+#     "http": "http://localhost:1087",
+#     "https": "http://localhost:1087",
+# }
 
 # 设置环境变量
-os.environ['HTTP_PROXY'] = proxies['http']
-os.environ['HTTPS_PROXY'] = proxies['https']
+# os.environ['HTTP_PROXY'] = proxies['http']
+# os.environ['HTTPS_PROXY'] = proxies['https']
 
 model = AutoModel.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0", proxies=proxies)
 tokenizer = AutoTokenizer.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0")
