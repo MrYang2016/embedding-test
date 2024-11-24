@@ -14,7 +14,8 @@ from transformers import AutoModel, AutoTokenizer
 # os.environ['HTTP_PROXY'] = proxies['http']
 # os.environ['HTTPS_PROXY'] = proxies['https']
 
-model = AutoModel.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0", proxies=proxies)
+# model = AutoModel.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0", proxies=proxies)
+model = AutoModel.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0")
 tokenizer = AutoTokenizer.from_pretrained("avsolatorio/NoInstruct-small-Embedding-v0")
 
 
